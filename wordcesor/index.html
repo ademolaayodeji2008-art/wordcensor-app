@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/09db8006b7.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <input id="input" placeholder="input note here">
+    <button onclick="clickMe()">click here</button>
+    <button onclick="clickUs()"><i class="fa-solid fa-arrow-rotate-right"></i></button>
+    <div class="value">
+        <p id="paragraph"></p>
+    </div>
+
+
+</body>
+
+</html>
+
+<!-- <script>
+    let idInput = document.getElementById('input')
+    let pTag = document.getElementById('paragraph')
+    function clickMe() {
+        // console.log(idInput.value);
+        pTag.innerHTML = idInput.value
+         
+    }
+    function clickUs() {
+        
+        idInput.value = "";
+        pTag.innerHTML = "";
+    }
+    // clickMe
+
+
+
+
+</script> -->
+
+<script>
+    // 1. Define your "sensor" list
+    const unwantedWords = ["apple", "banana", "cherry"]; 
+
+    function clickMe() {
+        const inputField = document.getElementById('input');
+        const display = document.getElementById('paragraph');
+        
+        // 2. Get the original text
+        let filteredText = inputField.value;
+
+        // 3. Loop through unwanted words and replace them
+        unwantedWords.forEach(word => {
+            // This creates a 'Regular Expression' to find all cases (g) 
+            // and ignore capital letters (i)
+            const regex = new RegExp(word, 'gi'); 
+            filteredText = filteredText.replace(regex, "****");
+        });
+
+        // 4. Show the censored result
+        display.innerText = filteredText;
+    }
+
+    function clickUs() {
+        document.getElementById('input').value = "";
+        document.getElementById('paragraph').innerText = "";
+    }
+</script>

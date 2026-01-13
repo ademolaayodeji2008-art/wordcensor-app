@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/09db8006b7.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="none.css">
+</head>
+
+<body>
+    <main>
+        <h1 class="title">WordSensor App</h1>
+
+        <div><input id="input" placeholder="input note here" class="input"></div>
+        <div class="buts"><button onclick="clickMe()">click here</button></div>
+        <div class="icon"><button onclick="clickUs()"><i class="fa-solid fa-arrow-rotate-right"></i></button></div>
+
+        <div class="value">
+            <p id="paragraph"></p>
+        </div>
+    </main>
+
+</body>
+
+</html>
+
+<script>
+    const unwantedText = ["b", "a", "d", "e", "v", "j"];
+
+    function clickMe() {
+        const inputSpace = document.getElementById('input');
+        const display = document.getElementById('paragraph');
+        let innerHTML = inputSpace.value;
+
+        unwantedText.forEach(word => {
+            const regex = new RegExp(word, 'gi');
+            innerHTML = innerHTML.replace(regex, "*");
+        });
+
+        display.innerHTML = innerHTML;
+    }
+    function clickUs() {
+        document.getElementById('input').value = "";
+        document.getElementById('paragraph').innerHTML = "";
+    }
+</script>
