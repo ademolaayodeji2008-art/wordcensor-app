@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="https://kit.fontawesome.com/09db8006b7.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <main>
+        <div id="answer" class="show">Input number from 1 - 20</div>
+        <input type="text" id="inputTag" class="input" placeholder="?">
+        <div class="num">
+            <button>0</button>
+            <button>1</button>
+            <button>2</button>
+            <button>3</button>
+            <button>4</button>
+            <button>5</button>
+            <button>6</button>
+            <button>7</button>
+            <button>8</button>
+            <button>9</button>
+            <button>10</button>
+            <button><i class="fa-solid fa-arrow-rotate-right"></i></button>
+        </div>
+        <button onclick="clickTag()" class="guess">GUESS💀</button>
+    </main>
+</body>
+
+</html>
+<script>
+    let inputTagOne = document.getElementById('inputTag')
+    let display = document.getElementById('answer')
+
+
+    function clickTag() {
+        const number = Math.ceil(Math.random() * 20);
+        let input = +inputTagOne.value
+        console.log(`Random number is ${number}`);
+
+        if (input > 10) {
+            console.log(`please input a number between 1 to 10`);
+            let User = 'please input a number between 1 to 20'
+            display.innerHTML = User
+        } else if (input === number) {
+            console.log(`The guess is correct`);
+            let User = `Congratulations🎉✨.Correct Answer is ${number}, You WON🎈!`
+
+            display.innerHTML = User
+        }
+        else if (input === "") {
+        console.log(`The guess is correct`);
+        let User = `Input Value!`
+
+        display.innerHTML = User
+    }
+    else {
+        console.log(`You are wrong, the answer is ${number}`);
+        let User = `You are wrong, the answer is ${number}`
+        display.innerHTML = User
+    }
+
+
+
+    }
+
+</script>

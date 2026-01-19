@@ -1,0 +1,78 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url(dupe2.webp);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.show{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    text-align: center;
+    background-color: blanchedalmond;
+    border-radius: 10px;
+    width: 200px;
+    height: 90px;
+}
+.input{
+    border-radius: 5px;
+    width: 30px;
+    height: 40px;
+    border: #7a00ff;
+    background-color: #00f2fe;
+    text-align: center;
+}
+.guess{
+    background-color: cadetblue;
+    border-radius: 5px;
+    border: #7a00ff;
+    width: 100px;
+    height: 30px;
+    cursor: pointer;
+}
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px; 
+    /* height: 110%; */
+    padding: 40px;
+    width: 450px;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    border: 4px solid transparent; 
+    background-image: 
+        linear-gradient(rgba(20, 25, 30, 0.9), rgba(20, 25, 30, 0.9)),
+        linear-gradient(135deg, #00f2fe 0%, #7a00ff 100%);
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+    box-shadow: 0 0 30px rgba(0, 242, 254, 0.2);
+}
+.num{
+    /* position: relative; */
+    width: 250px;
+    /* height: 200px; */
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2px;
+    margin-bottom: 5px;
+}
+.num button{
+    width: 60px;
+    height: 60px;
+    border-radius: 5px;
+    border: 1px solid lemonchiffon;
+}
