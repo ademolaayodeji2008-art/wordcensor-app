@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="perimeter.css">
+    <script src="https://kit.fontawesome.com/09db8006b7.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <h1>Perimeter (2(l+b)) Calculator </h1>
+    <main>
+        <div class="main">
+            <input type="text" id="input1" class="text" placeholder="length">
+            <input type="text" id="input2" class="text" placeholder="bredth">
+            <button onclick="calc()" class="click1">Calculate</button>
+            <button onclick="reload()" class="click2">Reload<i class="fa-solid fa-arrow-rotate-right"></i></button>
+            <div id="result" class="result">
+                <!-- The perimeter of a rectangle with lenght .... and bredth....is 60 -->
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>
+<script>
+    let inputOne = document.getElementById("input1");
+    let inputTwo = document.getElementById("input2");
+    let output = document.getElementById("result");
+
+    function calc() {
+        let length = Number(inputOne.value);
+        let width = Number(inputTwo.value);
+        let perimeter = 2 * (length + width);
+        output.innerHTML = "The perimeter of a rectangle with lenght " + (length) + "cm" + " and bredth " + (width) + "cm" + " is " + perimeter + "cm";
+
+        // console.log("Calculated Perimeter:", perimeter);
+    }
+
+    function reload() {
+        inputOne.value = "";
+        inputTwo.value = "";
+        output.innerHTML = "0";
+    }
+</script>

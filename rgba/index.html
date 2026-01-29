@@ -1,0 +1,165 @@
+\\\\\\\\\\\<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: #f4f7f6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+            height: 100vh;
+            margin: 0;
+            font-family: sans-serif;
+        }        div[class^=""] {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background: white;
+            padding: 20px;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        div:hover {
+            transform: translateY(-10px);
+        }
+
+        main {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-top: 15px;
+            border: 5px solid #eee;
+            background-color: #fff;
+            /* Initial color */
+            transition: background-color 0.4s ease;
+        }
+
+        button {
+            background-color: #333;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 30px;
+            cursor: pointer;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: background 0.2s;
+        }
+
+        button:hover {
+            background-color: #555;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        button:active {
+            transform: scale(0.95);
+        }
+
+        /* #resultMain {
+            width: 250px;
+            height: 250px;
+            border: 10px double #fff;
+            box-shadow: 0 0 30px rgba(255, 255, 255, 0.2);
+        }  */
+    </style>
+</head>
+
+
+<body>
+    <div class="one">
+        <button onclick="change1()">Change</button>
+        <main id="main1"> </main>
+    </div>
+    <div class="two">
+        <button onclick="change2()">Change</button>
+        <main id="main2"> </main>
+    </div>
+    <div class="three">
+        <button onclick="change3()">Change</button>
+        <main id="main3"> </main>
+    </div>
+    <!-- <div class="result-container">
+        <button onclick="combineColors()">Combine Colors</button>
+        <h3>Combined Color</h3>
+        <main id="resultMain"></main>
+    </div> -->
+</body>
+
+</html>
+
+
+
+<script>
+    function change1() {
+        let mains = document.getElementById("main1")
+        let R = Math.floor(Math.random() * 256)
+        let G = Math.floor(Math.random() * 256)
+        let B = Math.floor(Math.random() * 256)
+
+        console.log(R, G, B);
+        mains.style.backgroundColor = `rgba(${R},${G},${B})`;
+    }
+    function change2() {
+        let mains = document.getElementById("main2")
+        let R = Math.floor(Math.random() * 256)
+        let G = Math.floor(Math.random() * 256)
+        let B = Math.floor(Math.random() * 256)
+
+        console.log(R, G, B);
+        mains.style.backgroundColor = `rgba(${R},${G},${B})`;
+    }
+    function change3() {
+        let mains = document.getElementById("main3")
+        let R = Math.floor(Math.random() * 256)
+        let G = Math.floor(Math.random() * 256)
+        let B = Math.floor(Math.random() * 256)
+
+        console.log(R, G, B);
+        mains.style.backgroundColor = `rgba(${R},${G},${B})`;
+    }
+
+    // function combineColors() {
+    //     let main1 = document.getElementById("main1").style.backgroundColor;
+    //     let main2 = document.getElementById("main2").style.backgroundColor;
+    //     let main3 = document.getElementById("main3").style.backgroundColor;
+
+    //     function extractRGB(rgba) {
+    //         let nums = rgba.match(/\d+/g);
+    //         return nums ? nums.map(Number) : [0, 0, 0];
+    //     }
+
+    //     let [r1, g1, b1] = extractRGB(main1);
+    //     let [r2, g2, b2] = extractRGB(main2);
+    //     let [r3, g3, b3] = extractRGB(main3);
+
+    //     let rFinal = Math.min(Math.floor((r1 + r2 + r3) / 3), 255);
+    //     let gFinal = Math.min(Math.floor((g1 + g2 + g3) / 3), 255);
+    //     let bFinal = Math.min(Math.floor((b1 + b2 + b3) / 3), 255);
+
+    //     let resultMain = document.getElementById("resultMain");
+    //     resultMain.style.backgroundColor = `rgba(${rFinal},${gFinal},${bFinal})`;
+    // }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>

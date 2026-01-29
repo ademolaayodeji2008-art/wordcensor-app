@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <div class="calculator-card">
+        <h2>BMI Calculator</h2>
+
+        <label style="display:block; text-align:left; font-size: 0.8rem; color: #666;">Weight (kg)</label>
+        <input type="text" id="weight" class="weight" placeholder="e.g. 70">
+
+        <label style="display:block; text-align:left; font-size: 0.8rem; color: #666;">Height (cm)</label>
+        <input type="text" id="height" class="height" placeholder="e.g. 175">
+
+        <button onclick="calculate()" class="button">Calculate BMI</button>
+
+        <div id="result" class="result"></div>
+    </div>
+</body>
+
+</html>
+
+
+
+
+<script>
+    let weight = document.getElementById("weight")
+    let height = document.getElementById("height")
+    let finalAnswer = document.getElementById("result")
+
+
+
+    function calculate() {
+
+        let heightValue = height.value
+        let weightValue = weight.value
+
+        // console.log(BMI);
+        if (weightValue.trim() == "" || heightValue.trim() == "") {
+            finalAnswer.innerHTML = "Please enter valid weight and height"
+            return
+        }
+        else if (isNaN(weightValue) || isNaN(heightValue)) {
+            finalAnswer.innerHTML = "Please enter numeric values only"
+            return
+        }
+        else {
+            let meter = heightValue / 100
+            let BMI = weightValue / (meter * meter)
+            finalAnswer.innerHTML = `Your BMI is ${BMI}`
+
+            if (BMI <= 18.5) {
+                finalAnswer.innerHTML = "Underweight"
+            }
+            else if (BMI <= 24.9) {
+                finalAnswer.innerHTML = "Normalweight"
+            }
+            else if (BMI <= 29.9) {
+                finalAnswer.innerHTML = "Overweight"
+            }
+            else {
+                finalAnswer.innerHTML = 
+                finalAnswer.innerHTML = "So bad 😮Please go and reduce your weight"
+            }
+        }
+
+
+    }
+
+
+
+
+
+
+</script>

@@ -1,0 +1,87 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    background-image: url(using.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+body h1{
+    /* position: fixed; */
+        margin-bottom: 30px;
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;
+        color: chartreuse;
+}
+main {
+
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    padding: 40px;
+    width: 450px;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    border: 4px solid transparent;
+    background-image:
+        linear-gradient(rgba(20, 25, 30, 0.9), rgba(20, 25, 30, 0.9)),
+        linear-gradient(135deg, #00f2fe 0%, #7a00ff 100%);
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+    box-shadow: 0 0 30px rgba(0, 242, 254, 0.2);
+
+}
+.text{
+    width: 100%;
+    height: 45px;
+    padding: 10px;
+    font-size: 1.1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+}
+.result{
+    padding: 9px;
+    color: white;
+    margin-top: 10px; 
+    width: 100%;
+    background-color: #111;
+    border-radius: 10px;
+    min-height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgba(255,255,255,0.2);
+}
+.click:hover{
+    background-color: aqua;
+}
+.click1{
+    width: 80%;
+    background-color: aquamarine;
+    padding: 5px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    border-radius: 10px;
+    border: 1px solid lightgreen;
+}
+.click2{
+    width: 20%;
+    background-color: aquamarine;
+    padding: 5px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    border-radius: 10px;
+    border: 1px solid lightgreen;
+}

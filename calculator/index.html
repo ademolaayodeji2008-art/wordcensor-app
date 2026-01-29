@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="https://kit.fontawesome.com/09db8006b7.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="header"><h3>SMALL CALC</h3></div>
+    <div class="cal">
+        <div class="input">
+            <input type="text" id="input1" placeholder="input value">
+            <input type="text" id="input2" placeholder="input value">
+        </div>
+        <div class="functions">
+            <button id="plus" onclick="plus()">+</button>
+            <button id="minus" onclick="minus()">-</button>
+            <button id="div" onclick="divide()">/</button>
+            <button id="multiplication" onclick="multiply()">*</button>
+            <button id="start" onclick="reload()"><i class="fa-solid fa-arrow-rotate-right"></i></button>
+        </div>
+        <div class="output">
+            <p id="result"></p>
+        </div>
+    </div>
+</body>
+
+</html>
+<script>
+    let inputOne = document.getElementById("input1")
+    let inputTwo = document.getElementById("input2")
+    let output = document.getElementById("result")
+
+    function plus() {
+        let add = +input1.value + +input2.value
+        console.log(add);
+        output.innerHTML = add   
+    }
+    function minus() {
+        let minus = inputOne.value - inputTwo.value
+        console.log(minus);
+        output.innerHTML = minus
+    }
+    function divide() {
+        let div = inputOne.value / inputTwo.value
+        console.log(div);
+        output.innerHTML = div
+    }
+    function multiply() {
+        let times = inputOne.value * inputTwo.value
+        console.log(times);
+        output.innerHTML = times
+    }
+    function reload() {
+        document.getElementById('input1').value = "";
+        document.getElementById('input2').value = "";
+        document.getElementById('result').innerHTML = "";
+    }
+</script>

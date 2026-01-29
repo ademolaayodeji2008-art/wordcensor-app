@@ -1,0 +1,158 @@
+
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+    }
+
+    /* 2. The Main Container (Card) */
+    .calculator-card {
+        background: white;
+        padding: 2rem;
+        border-radius: 15px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        width: 100%;
+        max-width: 350px;
+        text-align: center;
+    }
+
+    h2 { color: #333; margin-bottom: 1.5rem; }
+
+    /* 3. Styling the Inputs */
+    input {
+        width: 100%;
+        padding: 12px;
+        margin: 10px 0;
+        border: 2px solid #eee;
+        border-radius: 8px;
+        box-sizing: border-box; /* Important for width */
+        font-size: 1rem;
+        transition: border-color 0.3s;
+    }
+
+    input:focus {
+        border-color: #667eea;
+        outline: none;
+    }
+
+    /* 4. Styling the Button */
+    .button {
+        width: 100%;
+        padding: 12px;
+        background-color: #667eea;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        font-size: 1rem;
+        font-weight: bold;
+        cursor: pointer;
+        margin-top: 10px;
+        transition: background 0.3s;
+    }
+
+    .button:hover {
+        background-color: #5a67d8;
+    }
+
+    /* 5. Result Styling */
+    .result {
+        margin-top: 20px;
+        font-size: 1.2rem;
+        font-weight: bold;
+        color: #4a5568;
+        min-height: 1.5em; /* Prevents layout jump */
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* media queries */
+@media (max-width: 480px) {
+    .calculator-card {
+        padding: 1.5rem;
+        margin: 1rem;
+    }
+
+    input, .button {
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+}
+@media screen {
+    
+}

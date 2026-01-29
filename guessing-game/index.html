@@ -42,30 +42,29 @@
         let input = +inputTagOne.value
         console.log(`Random number is ${number}`);
 
-        if (input > 10) {
-            console.log(`please input a number between 1 to 10`);
+        if (input > 20) {
+            alert = (`please input a number between 1 to 20`);
             let User = 'please input a number between 1 to 20'
             display.innerHTML = User
+            display.style.color = "red"
         } else if (input === number) {
-            console.log(`The guess is correct`);
             let User = `Congratulations🎉✨.Correct Answer is ${number}, You WON🎈!`
-
             display.innerHTML = User
         }
-        else if (input === "") {
-        console.log(`The guess is correct`);
-        let User = `Input Value!`
-
-        display.innerHTML = User
+        else if (input ==  " ") {
+            let User = `Input Value!`
+            alert = User
+        }
+        else {
+            console.log(`You are wrong, the answer is ${number}`);
+            let User = `You are wrong, the answer is ${number}`
+            display.innerHTML = User
+        }
     }
-    else {
-        console.log(`You are wrong, the answer is ${number}`);
-        let User = `You are wrong, the answer is ${number}`
-        display.innerHTML = User
-    }
 
 
 
-    }
+
+
 
 </script>

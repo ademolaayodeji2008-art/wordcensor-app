@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            height: 100%;
+            margin: 0;
+        }
+
+        #content {
+            width: 80%;
+            height: 400px; /* Fixed height or use 'vh' units */
+            background-size: cover;
+            background-position: center;
+            border: 2px solid #ccc; /* Helpful for debugging visibility */
+        }
+    </style>
+</head>
+<body>
+    <button onclick="next()">NEXT</button>
+    <div id="content"></div>
+    <button onclick="previous()">PREVIOUS</button>
+</body>
+</html>
+
+
+<script>
+    let contentDiv = document.getElementById("content");
+    let currentIndex = 0;
+    let seasons = [
+        'https://images.pexels.com/photos/1741696/pexels-photo-1741696.jpeg?cs=srgb&dl=pexels-jake-pnw-1741696.jpg&fm=jpg',
+        'https://images.pexels.com/photos/1741696/pexels-photo-1741696.jpeg?cs=srgb&dl=pexels-jake-pnw-1741696.jpg&fm=jpg',
+        'https://media.istockphoto.com/id/460682111/photo/panorama-of-the-winter-sunrise-in-mountains.jpg?s=612x612&w=0&k=20&c=DYe99hLsrxeGCIFy-sYTCnQCBllnoPVn3digKa7-J9I=',
+        'https://miro.medium.com/v2/resize:fit:1400/0*1DtL639ZXJQj8ZDA.jpg'
+    ]
+    function image() {
+        contentDiv.style.backgroundImage = `url(https://images.pexels.com/photos/1741696/pexels-photo-1741696.jpeg?cs=srgb&dl=pexels-jake-pnw-1741696.jpg&fm=jpg)`;
+    }
+    image()
+    function next(params) {
+        currentIndex = (currentIndex + 1) % seasons.length;
+        contentDiv.style.backgroundImage = `url(${seasons[currentIndex]})`;
+    }
+
+    function previous(params) {
+        currentIndex = (currentIndex - 1 + seasons.length) % seasons.length;
+        contentDiv.style.backgroundImage = `url(${seasons[currentIndex]})`;
+    }
+
+
+
+
+
+
+
+
+</script>
